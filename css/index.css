@@ -1,0 +1,166 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color:transparent;
+}
+li{
+	list-style: none;
+}
+html , body{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background: #f1f2ce;
+}
+#control{
+	width: 100%;
+	height: 100%;
+	background: url(../img/food.png);
+}
+#show{
+	width: 100%;
+	background-color: #000;
+}
+#text{
+	display: block;
+	width: 100%;
+	height: 10%;
+	text-indent: 10px;
+	font-size: 20px;
+	float: left;
+	outline: none;
+	border: none;
+}
+#icon , #font{
+	width: 14%;
+	height: 10%;
+	text-align: center;
+	line-height: 400%;
+	font-size: 12px;
+	border-radius: 5px;
+	float: left;
+}
+#icon img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.slide{
+	width: 100%;
+	height: 8%;
+	margin: 1% 0;
+	float: left;
+}
+.slide > span{
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+	line-height: 250%;
+	border-radius: 5px;
+	float: left;
+	color: #fff;
+	font-size: 18px;
+	background-color: #99cc33;
+	text-align: center;
+}
+.space{
+	width: 55%;
+	height: 20%;
+	margin-top: 5%;
+	float: left;
+	position: relative;
+	background-color: #fff;
+}
+.progress{
+	width: 0;
+	height: 100%;
+	background-color: #99cc33;
+	position: absolute;
+}
+.dot{
+	width: 10%;
+	height: 300%;
+	position: absolute;
+	left: 0;
+	top: -100%;
+	border-radius: 5px;
+	background-color: #99cc33;
+	z-index: 99;
+	
+}
+.set{
+	display: block;
+	border: none;
+	outline: none;
+	width: 25%;
+	height: 100%;
+	text-align: center;
+	font-size: 18px;
+	float: left;
+}
+#blink{
+	width: 20%;
+	height: 5%;
+	margin-top: 2%;
+	margin-left: 1%;
+	line-height: 200%;
+	float: left;
+}
+#blink span:nth-child(1){
+	display: block;
+	width: 70%;
+	float: left;
+}
+.check{
+	display: block;
+	width: 30%;
+	height: 80%;
+	margin-top: 10%;
+	border-radius: 5px;
+	background-color: #fff;
+	float: left;
+}
+#style{
+	width: 70%;
+	height: 5%;
+	margin-top: 2%;
+	line-height: 200%;
+	float: right;
+}
+#style li{
+	width: 30%;
+	margin-right: 3%;
+	height: 100%;
+	float: left;
+}
+#style li span:nth-child(1){
+	width: 70%;
+	display: block;
+	float: left;
+}
+.checked{
+	background-color: #99cc33;
+}
+#sample{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	float: left;
+	margin-top: 2%;
+	background-color: #000;
+}
+#sample li{
+	padding:2% 0;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+}
+#sample li:nth-child(even){
+	background-color: #222;
+}
+p{
+	float: left;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}

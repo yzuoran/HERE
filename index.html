@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>HERE</title>
+	<link rel="apple-touch-icon-precomposed" href="img/logo.png">
+	<link rel="shortcut icon" href="img/icon.png">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div id="control">
+<!--效果演示-->
+	<canvas id="show" width="200" height="500">您的浏览器不支持canvas</canvas>
+<!--输入框-->
+	<input id="text" type="text" value="请输入内容..." />
+<!--表情选择-->
+	<!-- <div id="icon">
+		<img src="./img/icon1.png">
+	</div> -->
+<!--字体类别-->
+	<!-- <div id="font">
+		微软雅黑
+	</div> -->
+<!--字体大小-->
+	<div id="size" class="slide">
+		<span>大小</span>
+		<div class="sizeSlide space">
+			<div class="sizePgs progress"></div>
+			<div class="sizeDot dot"></div>
+		</div>
+		<input class="sizeset set" type="text" value="80" />
+	</div>
+<!--字体颜色-->
+	<div id="color" class="slide">
+		<span>颜色</span>
+		<div class="colorSlide space">
+			<div class="colorPgs progress"></div>
+			<div class="colorDot dot"></div>
+		</div>
+		<input class="colorset set" type="text" value="#99cc33" />
+	</div>
+<!--字体粗细-->
+	<div id="weight" class="slide">
+		<span>宽度</span>
+		<div class="weightSlide space">
+			<div class="weightPgs progress"></div>
+			<div class="weightDot dot"></div>
+		</div>
+		<input class="weightset set" type="text" value="200" />
+	</div>
+<!--播放速度-->
+	<div id="speed" class="slide">
+		<span>速度</span>
+		<div class="speedSlide space">
+			<div class="speedPgs progress"></div>
+			<div class="speedDot dot"></div>
+		</div>
+		<input class="speedset set" type="text" value="4"/>
+	</div>
+<!--是否闪烁-->
+	<div id="blink">
+		<span>闪烁:</span>
+		<span class="check"></span>
+	</div>
+<!--像素样式-->
+	<ul id="style">
+		<li>
+			<span>正常:</span>
+			<span class="check"></span>
+		</li>
+		<li>
+			<span>圆形:</span>
+			<span class="check"></span>
+		</li>
+		<li>
+			<span>矩形:</span>
+			<span class="check"></span>
+		</li>
+	</ul>
+<!--常用示例-->
+	<ul id="sample">
+		<li>无与伦比 为杰沉迷</li>
+		<li>生日快乐</li>
+		<li>Happy Birthday</li>
+	</ul>
+	<p>请先关闭系统锁屏设置,横屏有惊喜哦O(∩_∩)O.</p>
+<!--表情集-->
+	<!-- <ul id="icon_set"></ul> -->
+<!--字体集-->
+	<!-- <ul id="font_set"></ul> -->
+<!--示例集-->
+	<!-- <ul id="sample_set"></ul> -->
+</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/getScreen.js"></script>
+<script type="text/javascript" src="js/jquery.slider.js"></script>
+<script type="text/javascript" src="js/mask.js"></script>
+<script type="text/javascript" src="js/control.js"></script>
+<script type="text/javascript" src="js/show.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+
+var MBP ={};
+MBP.hideUrlBar = function(){
+	var win = window,
+		doc = win.document;
+	if (!location.hash || !win.addEventListener) {
+		window.scrollTo(0,1);
+		var scrollTop = 1,
+			bodycheck = setInterval(function(){
+				if (doc.body) {
+					clearInterval(bodycheck);
+					scrollTop = "scrolllTop" in doc.body ? doc.body.scrollTop : 1;
+					win.scrollTo(0 , scrollTop === 1? 0:1);
+				}
+			},15);
+	}
+	win.addEventListener("load" , function(){
+		setTimeout(function(){
+			win.scrollTo(0, scrollTop === 1 ? 0:1);
+		},0);
+	},false);
+};
+MBP.hideUrlBar();
+</script>
+</html>

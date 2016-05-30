@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<title>index</title>
+</head>
+<body>
+<canvas id="canvas" width="800" height="400"></canvas>
+</body>
+<script type="text/javascript">
+	var canvas = document.getElementById("canvas"),
+	ctx = canvas.getContext("2d");
+	ctx.fillStyle = "#000";
+	ctx.font = "thin 30px 微软雅黑";
+	ctx.fill();
+	ctx.strokeText("无与伦比" , canvas.width/2 , 50);
+
+	ctx.font = "200 30px 微软雅黑";
+	ctx.strokeText("无与伦比" , canvas.width/2 , 100);
+	ctx.font = "600 60px 微软雅黑";
+	ctx.strokeStyle = "red";
+	ctx.lineWidth = 5;
+	ctx.strokeText("无与伦比" , canvas.width/2 , 150);
+
+	ctx.font = "9000 30px 微软雅黑";
+	ctx.strokeText("无与伦比" , canvas.width/2 , 200);
+</script>
+</html>
